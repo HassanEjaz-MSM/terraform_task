@@ -270,7 +270,7 @@ resource "aws_alb_listener_rule" "alb_route_path" {
 #-----------AutoScaling Group------------#
 resource "aws_autoscaling_group" "asg" {
   launch_configuration = "${aws_launch_configuration.alc.id}"
-  availability_zones   = ["${data.aws_availability_zones.available.names[0]}", "${data.aws_availability_zones.available.names[1]}"]
+  //availability_zones   = ["${data.aws_availability_zones.available.names[0]}", "${data.aws_availability_zones.available.names[1]}"]
 
   min_size = 2
   max_size = 5
