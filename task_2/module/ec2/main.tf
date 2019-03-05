@@ -153,7 +153,7 @@ resource "aws_instance" "bastion_server" {
 #-----------AutoScaling Group------------#
 resource "aws_autoscaling_group" "asg" {
   launch_configuration = "${aws_launch_configuration.alc.id}"
-  availability_zones   = ["eu-west-2b", "eu-west-2a"]
+  //availability_zones   = ["eu-west-2b", "eu-west-2a"]
 
   min_size = 2
   max_size = 5
